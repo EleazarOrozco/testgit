@@ -70,7 +70,7 @@ let cMale = new Corredor(1);
 let cFmale = new Corredor(2);
 
 while(cMale.posicion <100 && cFmale.posicion <100){
-    console.log("Turno numero",num++); 
+    console.log("Es el turno numero",num++); 
     cMale.correr();
     cFmale.correr()
     
