@@ -104,7 +104,7 @@ let num = 1;
 let Liebres = new Liebre(2);
 let Tortugas = new Tortuga(1);
 
-while(Tortugas.posicion <100){
+while(Tortugas.posicion <100 && Liebres.posicion <100){
     console.log("Es el turno numero",num++);
     Liebres.correr2();
     Tortugas.correr();
