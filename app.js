@@ -26,96 +26,94 @@
 //   }
 //   const trian = new Triangulo(a, b);
   
-//   console.log(trian.area());
+// //   console.log(trian.area());
 class Dado{
     lanzar(){
-      return  Math.floor(Math.random()*100); 
+      return  Math.floor(Math.random()*6); 
     }    
 }
 let miDado = new Dado();
-//console.log(miDado.lanzar())
-//for (let i = 0; i < 10; i++) {
-    //console.log(miDado.lanzar())
-//}
-
-class Tortuga{
-    constructor(numero){
-        this.numero = numero;
-        this.posicion = 0;
-        this.dado = new Dado();
-    }
-    correr(){
-        let avanzar = this.dado.lanzar();
-        if (avanzar % 2 == 0) {
-            this.posicion +=3;
-            
-            console.log("La Tortuga avanzó 3 y queda en " + this.posicion);           
-        }
-        else if (avanzar % 5 == 0){
-            this.posicion -=6;
-            
-            console.log("La Tortuga retrocede 6 y queda en " + this.posicion);            
-
-        }
-        else{
-        this.posicion +=1;
-            console.log("La Tortuga avanzó 1 y queda en " + this.posicion);            
-        }
-    }
-
+for (let i = 0; i < 100; i++) {
+    console.log(miDado.lanzar())
 }
-class Liebre{
-    constructor(numero){
-        this.numero = numero;
-        this.posicion = 0;
-        this.dado = new Dado();
-    }
-    correr2(){
-        let avanzar = this.dado.lanzar();
-        if (avanzar<=20) {
-            this.posicion +=0;
 
-            console.log("La Liebre no avanzó y queda en " + this.posicion);           
-        }
-        else if (avanzar>20 && avanzar<=40){
-            this.posicion +=9;
+// class Tortuga{
+//     constructor(numero){
+//         this.numero = numero;
+//         this.posicion = 0;
+//         this.dado = new Dado();
+//     }
+//     correr(){
+//         let avanzar = this.dado.lanzar();
+//         if (avanzar % 2 == 0) {
+//             this.posicion +=3;
+            
+//             console.log("La Tortuga avanzó 3 y queda en " + this.posicion);           
+//         }
+//         else if (avanzar % 5 == 0){
+//             this.posicion -=6;
+            
+//             console.log("La Tortuga retrocede 6 y queda en " + this.posicion);            
 
-            console.log("La Liebre avanza 9 y queda en " + this.posicion);            
-        }
-        else if(avanzar>40 && avanzar<=50){
-            this.posicion -=12;
+//         }
+//         else{
+//         this.posicion +=1;
+//             console.log("La Tortuga avanzó 1 y queda en " + this.posicion);            
+//         }
+//     }
 
-            console.log("La Liebre retrocede 12 y queda en " + this.posicion);            
-        }
-        else if(avanzar>50 && avanzar<=85){
-            this.posicion +=1;
+// }
+// class Liebre{
+//     constructor(numero){
+//         this.numero = numero;
+//         this.posicion = 0;
+//         this.dado = new Dado();
+//     }
+//     correr2(){
+//         let avanzar = this.dado.lanzar();
+//         if (avanzar<=20) {
+//             this.posicion +=0;
 
-            console.log("La Liebre avanza 1 y queda en " + this.posicion);            
-        }
-        else{
-        this.posicion -=2;
+//             console.log("La Liebre no avanzó y queda en " + this.posicion);           
+//         }
+//         else if (avanzar>20 && avanzar<=40){
+//             this.posicion +=9;
 
-        console.log("La Liebre retrocede 2 y queda en " + this.posicion); 
-    }
-    }
+//             console.log("La Liebre avanza 9 y queda en " + this.posicion);            
+//         }
+//         else if(avanzar>40 && avanzar<=50){
+//             this.posicion -=12;
 
-}
-let num = 1;
-let Liebres = new Liebre(2);
-let Tortugas = new Tortuga(1);
+//             console.log("La Liebre retrocede 12 y queda en " + this.posicion);            
+//         }
+//         else if(avanzar>50 && avanzar<=85){
+//             this.posicion +=1;
 
-while(Tortugas.posicion <100 && Liebres.posicion <100){
-    console.log("Es el turno numero",num++);
-    Liebres.correr2();
-    Tortugas.correr();
+//             console.log("La Liebre avanza 1 y queda en " + this.posicion);            
+//         }
+//         else{
+//         this.posicion -=2;
+
+//         console.log("La Liebre retrocede 2 y queda en " + this.posicion); 
+//     }
+//     }
+
+// }
+// let num = 1;
+// let Liebres = new Liebre(2);
+// let Tortugas = new Tortuga(1);
+
+// while(Tortugas.posicion <100 && Liebres.posicion <100){
+//     console.log("Es el turno numero",num++);
+//     Liebres.correr2();
+//     Tortugas.correr();
     
-}
-if (Tortugas.posicion <Liebres.posicion) {
-       console.log("Ganó la liebre quedando en la posición " , Liebres.posicion) 
-}
-else{
-    console.log("Ganó la tortuga quedando en la posición " , Tortugas.posicion) 
+// }
+// if (Tortugas.posicion <Liebres.posicion) {
+//        console.log("Ganó la liebre quedando en la posición " , Liebres.posicion) 
+// }
+// else{
+//     console.log("Ganó la tortuga quedando en la posición " , Tortugas.posicion) 
 
-}
-
-
+// }
+ 
